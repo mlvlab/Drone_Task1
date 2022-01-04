@@ -16,8 +16,6 @@ from task1_utils import match_pairs, ocr, MatchImageSizeTo
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"   
 os.environ["CUDA_VISIBLE_DEVICES"]="5"
 
-
-
 def task1(frames, imgs, search_radius=15, ocr_batch_size=6, match_batch_size=7 ):
     frame_total = len(frames)
 
