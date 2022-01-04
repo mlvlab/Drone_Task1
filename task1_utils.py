@@ -74,6 +74,7 @@ def match_pairs(vid_, imgs, vid_batch, device,
         vid_: list of numpy vid frames, range 0~255, shape H x W x 3 , BGR           
         imgs: list of numpy images, range 0~255, shape H x W , Grayscale
         vid_batch: batch size for video
+        device: device
     Return:
         result: list of tuples (frame idx, match_rate)
     """
