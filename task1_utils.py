@@ -8,6 +8,7 @@ import os
 import math
 import cv2
 from glob import glob
+from tqdm import tqdm
 
 import easyocr
 from superglue.superpoint import SuperPoint
@@ -81,7 +82,7 @@ def match_pairs(vid_, imgs, vid_batch, device,
 
     vid = [cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) for frame in vid_]
 
-    torch.set_grad_enabled(False)
+    torch.set_grad_enabled(Drone_Task1False)
 
     config = {
         'superpoint': {
@@ -121,7 +122,6 @@ def match_pairs(vid_, imgs, vid_batch, device,
     Iters = math.ceil(T/vid_batch)
     start = 0
 
-    from tqdm import tqdm
     with tqdm(total=Iters) as pbar:
         for i in range(Iters):
             start = i * vid_batch
